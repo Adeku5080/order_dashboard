@@ -1,0 +1,12 @@
+.dashboard-page {
+  display: flex;
+  height: 100%;
+  background: #FFFFFF;
+  position: relative;
+  
+
+
+  &__container {
+    width: calc(100% - 240px);
+  }
+}

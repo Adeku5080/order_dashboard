@@ -1,0 +1,179 @@
+.side-bar {
+  width: 250px;
+  height: 1070px;
+  position: relative;
+  font-family: 'Inter';
+  background-color: #ffffff;
+  display: flex;
+  min-height: max-content;
+  // border: 1px solid red;
+  &__section {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1.4rem;
+    width: 240px;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    &__divider {
+      width: 50%;
+      position: absolute;
+      top: 88px;
+      left: 0;
+      right: 80px;
+      width: 95%;
+      border: 0.1px solid #f5f5f5;
+    }
+
+    &__company-profile {
+      display: flex;
+      margin-top: 33px;
+      width: 200px;
+
+      @media only screen and (max-height: 650px) {
+        margin-top: 36px;
+      }
+
+      @media only screen and (max-height: 635px) {
+        margin-top: 38px;
+        margin-bottom: 15px;
+      }
+
+      &__info {
+        display: flex;
+        flex-direction: column;
+        margin-left: 14px;
+
+        &__text {
+          font-weight: 500;
+          font-size: 12px;
+
+          font-size: 12px;
+          color: #0b142b;
+        }
+
+        &__add-info {
+          font-weight: 400;
+          font-size: 12px;
+
+          color: #9d9d9d;
+        }
+      }
+    }
+
+    h5:where([class*='ant-typography']) {
+      font-size: 11px;
+      font-family: 'Inter';
+      font-weight: 500;
+      color: #ccc;
+      margin-bottom: -12px;
+      margin-top: 10px;
+      margin-left: 6px;
+    }
+
+    &__actions-container,
+    &__actions-container--first,
+    &__actions-container--last {
+      display: flex;
+      flex-direction: column;
+
+      @media only screen and (max-height: 706px) {
+        margin-top: -3%;
+      }
+    }
+
+    ul {
+      list-style: none;
+      margin-top: 7vh;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-left: 0.2rem;
+      padding-left: 0;
+
+      li {
+        display: flex;
+        width: 100%;
+        margin-bottom: 2px;
+        align-items: center;
+        text-decoration: none;
+        gap: 10px;
+
+        a {
+          display: flex;
+          align-items: center;
+          height: 140%;
+          justify-content: flex-start;
+          transform: translateX(-11px);
+          padding-left: 12px;
+          border-radius: 4px;
+          text-decoration: none;
+          color: #64748b;
+          font-weight: 500;
+          font-size: 16px;
+          padding-top: 5px;
+          padding-bottom: 5px;
+          line-height: 24px;
+
+          [class*='ant-typography'] {
+            font-size: 14px;
+            font-family: 'Inter';
+            color: #475467;
+          }
+        }
+
+        .a--active {
+          width: 100%;
+          color: #2563eb !important;
+          font-weight: 700;
+          font-size: 16px;
+
+          [class*='ant-typography'] {
+            font-family: 'Inter';
+            font-size: 15px;
+            color: #0063b0;
+            font-weight: 900 !important;
+          }
+        }
+      }
+    }
+
+    &__log-out-section {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      width: 90%;
+      margin-left: 10px;
+      margin-top: 18rem;
+      font-weight: 400;
+      font-size: 13px;
+
+      @media only screen and (max-height: 675px) {
+        margin-top: -8%;
+      }
+
+      @media only screen and (max-height: 660px) {
+        margin-top: -11%;
+      }
+
+      &__item {
+        display: flex;
+        margin-top: -10px;
+        margin-left: -5px;
+        font-size: 14px;
+        line-height: 22.4px;
+        letter-spacing: 0.2px;
+        color: #64748b;
+        gap: 10px;
+        align-items: center;
+        padding: 10px 0;
+
+        @media only screen and (max-height: 679px) {
+          margin-top: -8%;
+        }
+      }
+    }
+  }
+}

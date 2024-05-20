@@ -1,0 +1,86 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  padding-left: 50px;
+  padding-right: 30px;
+  height: 100%;
+  background: #f8fafc;
+  font-family: 'Inter';
+
+  &__title-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__stats-section {
+    display: flex;
+    background: #ffffff;
+    width: 100%;
+    border-radius: 12px;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    align-items: center;
+
+    &__stat {
+      padding: 20px 24px 20px 24px;
+      width: 335px;
+      // margin-top: 10px;
+      // margin-bottom: 10px;
+
+      p {
+        font-size: 14px;
+      }
+
+      div {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 30px;
+      }
+    }
+
+    &__divider {
+      height: 60%;
+      border: 1px solid #e2e8f0;
+    }
+  }
+
+  &__charts-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    color: #f8fafc;
+    gap: 20px;
+
+    &__line {
+      width: 662px;
+      background: #ffffff;
+      // height: 364px;
+      z-index: 10;
+      border-radius: 12px;
+    }
+
+    &__doughnut {
+      width: 435px;
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 30px;
+    }
+  }
+
+  &__table-section {
+    .custom-table .ant-table-thead > tr > th {
+      background-color: #4caf50; /* Change this to your desired background color */
+      color: white;
+    }
+
+    .ant-table-thead > tr > th {
+      background-color: #4caf50; /* Change this to your desired background color */
+      color: white; /* Change this to your desired text color */
+    }
+    // [class*='ant-table-thead' ] {
+    //   background: red;
+    //   color:red;
+    // }
+  }
+}

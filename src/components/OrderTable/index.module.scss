@@ -1,0 +1,13 @@
+.custom-table .ant-table-thead > tr > th {
+  background-color: #4CAF50; 
+  color: white; 
+  border: 1px solid red;
+}
+
+[class^="thead > tr > th"]{
+    border: 1px solid red ;
+}
+
+thead > tr > th {
+  background-color: yellow;
+}
