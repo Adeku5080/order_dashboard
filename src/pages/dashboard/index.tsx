@@ -12,6 +12,7 @@ const DashboardPage = () => {
     <div>
       <ContentLayout>
         <Dashboard/>
+        
       </ContentLayout>
     </div>
   )

@@ -49,10 +49,10 @@
 
   &__charts-section {
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
     margin-bottom: 25px;
     color: #f8fafc;
-    gap: 20px;
+    gap: 55px;
 
     @media (max-width: 860px) {
       flex-direction: column;
@@ -66,7 +66,7 @@
     }
 
     &__doughnut {
-      width: 435px;
+      width: 413px;
       background: #ffffff;
       border-radius: 12px;
       padding: 30px;

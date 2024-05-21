@@ -37,7 +37,7 @@ const DoughnutChart = ({ scifi, drama, horror, docu, comedy, totalOrders }) => {
 
         console.log(totalOrders, 'before in doughnut');
 
-
+  
   const innerLabel = {
     id: 'innerLabel',
     afterDatasetsDraw(chart) {
@@ -45,8 +45,8 @@ const DoughnutChart = ({ scifi, drama, horror, docu, comedy, totalOrders }) => {
         ctx,
         chartArea: { width, height },
       } = chart;
-      console.log(totalOrders, 'orders in doughnut');
-      const text = 50;
+      console.log(totalOrders.toString(), 'orders in doughnut');
+      const text = totalOrders.toString();
 
       ctx.save();
       ctx.font = '32px sans-serif';
