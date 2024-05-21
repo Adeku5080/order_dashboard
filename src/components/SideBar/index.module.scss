@@ -7,6 +7,10 @@
   display: flex;
   min-height: max-content;
   // border: 1px solid red;
+
+  @media (max-width :860px){
+    display: none;
+  }
   &__section {
     display: flex;
     flex-direction: column;

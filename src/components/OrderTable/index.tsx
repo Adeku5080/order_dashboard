@@ -34,6 +34,7 @@ const OrderTable = ({ orders }: OrderTableProps) => {
       ),
       dataIndex: 'customer_name',
       key: 'customer_name',
+      responsive: ['xs', 'sm'],
       render: (_, record) => {
         return (
           <div
@@ -53,6 +54,8 @@ const OrderTable = ({ orders }: OrderTableProps) => {
       ),
       dataIndex: 'product_name',
       key: 'product_name',
+      responsive: ['xs', 'sm'],
+
       render: (_, record) => {
         return (
           <div
@@ -72,6 +75,8 @@ const OrderTable = ({ orders }: OrderTableProps) => {
       ),
       dataIndex: 'category',
       key: 'category',
+      responsive: ['xs', 'sm'],
+
       render: (_, record) => {
         return (
           <div
@@ -91,6 +96,8 @@ const OrderTable = ({ orders }: OrderTableProps) => {
       ),
       dataIndex: 'date',
       key: 'date',
+      responsive: ['xs', 'sm'],
+
       render: (_, record) => {
         return (
           <div
@@ -111,6 +118,8 @@ const OrderTable = ({ orders }: OrderTableProps) => {
       ),
       dataIndex: 'price',
       key: 'price',
+      responsive: ['xs', 'sm'],
+
       render: (_, record) => {
         return (
           <div
@@ -124,11 +133,13 @@ const OrderTable = ({ orders }: OrderTableProps) => {
     {
       title: (
         <div style={{ fontSize: '12px', fontWeight: '500', color: '#64748B' }}>
-          <img src='/dots.svg' alt='icon'/>
+          <img src="/dots.svg" alt="icon" />
         </div>
       ),
       dataIndex: 'Icon',
       key: 'Icon',
+      responsive: ['xs', 'sm'],
+
       render: (_, record) => {
         return (
           <div

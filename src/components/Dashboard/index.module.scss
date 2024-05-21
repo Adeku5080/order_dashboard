@@ -7,10 +7,18 @@
   background: #f8fafc;
   font-family: 'Inter';
 
+  @media (max-width: 860px) {
+    width: 100%;
+  }
+
   &__title-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 860px) {
+      flex-direction: column;
+    }
 
     &__header {
       margin-bottom: 15px;
@@ -18,12 +26,20 @@
         font-size: 24px;
         font-weight: 700;
         font-family: 'Inter';
+
+        @media (max-width: 860px) {
+          font-size: 16px;
+        }
       }
 
       p {
         font-family: 'Inter';
         font-size: 16px;
         font-weight: 400;
+
+        @media (max-width: 860px) {
+          font-size: 12px;
+        }
       }
     }
   }
@@ -39,20 +55,34 @@
 
     @media (max-width: 860px) {
       flex-direction: column;
+      margin-top: 25px;
     }
 
     &__stat {
       padding: 20px 24px 20px 24px;
       width: 335px;
+      @media (max-width: 860px) {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+      }
 
       p {
         font-size: 14px;
+
+        @media (max-width: 860px) {
+          font-size: 12px;
+        }
       }
 
       div {
         font-size: 24px;
         font-weight: 700;
         line-height: 30px;
+
+           @media (max-width: 860px) {
+          font-size: 18px;
+        }
       }
     }
 
@@ -71,6 +101,7 @@
 
     @media (max-width: 860px) {
       flex-direction: column;
+      gap:20px;
     }
 
     &__line {
@@ -78,6 +109,11 @@
       background: #ffffff;
       z-index: 10;
       border-radius: 12px;
+
+      @media(max-width:860px){
+        width: 100%;
+      }
+
     }
 
     &__doughnut {
@@ -85,6 +121,11 @@
       background: #ffffff;
       border-radius: 12px;
       padding: 30px;
+
+       @media(max-width:860px){
+        width: 100%;
+      }
+
     }
   }
 
@@ -98,10 +139,10 @@
       font-size: 15px;
       font-weight: 700;
       line-height: 24px;
-      letter-spacing: 0.30px;
+      letter-spacing: 0.3px;
     }
 
-    .ant-table-tbody{
+    .ant-table-tbody {
       font-weight: 700;
     }
     .ant-table-thead > {
@@ -110,12 +151,12 @@
       font-weight: 500;
     }
 
-    .ant-table-thead > tr  {
+    .ant-table-thead > tr {
       background-color: #4caf50; /* Change this to your desired background color */
       color: white; /* Change this to your desired text color */
     }
 
-    .ant-table-tbody >tr >td {
+    .ant-table-tbody > tr > td {
       border: 1px solid red;
     }
     // [class*='ant-table-thead' ] {
@@ -123,6 +164,4 @@
     //   color:red;
     // }
   }
-
-
 }
