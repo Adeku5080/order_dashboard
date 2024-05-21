@@ -53,7 +53,9 @@ const CreateOrder = () => {
 
       if (res.data.msg === 'order created successfully') {
         toast.success('Order created successfully');
-        navigate('/dashboard');
+        setTimeout(() => {
+          navigate('/dashboard');
+        }, 800);
       } else {
         toast.error('Failed to create order');
       }
@@ -123,7 +125,7 @@ const CreateOrder = () => {
                   <Option value="Comedy">Comedy</Option>
                   <Option value="Drama">Drama</Option>
                   <Option value="Horror">Horror</Option>
-                  <Option value="Docu">Docu</Option>
+                  <Option value="Documentary">Docu</Option>
                 </Select>
               </Form.Item>
 

@@ -118,6 +118,7 @@ const Dashboard = () => {
   const handleFilterSelected = (value: any) => {
     setFilterSelected(value);
   };
+  console.log(orders);
 
   return (
     <section className={styles.dashboard}>
