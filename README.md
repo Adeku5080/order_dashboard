@@ -2,7 +2,7 @@
 
 ## Installation
 
-Install dependecies 
+Install dependencies 
 
 ```
  npm install
