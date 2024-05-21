@@ -23,6 +23,7 @@ const OrderTable = ({ orders }: OrderTableProps) => {
     product_category: string;
     order_date: string;
     price: string;
+    icon: string;
   }
   const orderColumnData: ColumnsType<OrderDataType> = [
     {
@@ -104,7 +105,7 @@ const OrderTable = ({ orders }: OrderTableProps) => {
 
     {
       title: (
-        <div style={{ fontSize: '12px', fontWeight: '500', color: '#64748B'}}>
+        <div style={{ fontSize: '12px', fontWeight: '500', color: '#64748B' }}>
           Price
         </div>
       ),
@@ -116,6 +117,24 @@ const OrderTable = ({ orders }: OrderTableProps) => {
             style={{ fontWeight: '600', fontSize: '12px', color: '#0f172a' }}
           >
             {record.price}
+          </div>
+        );
+      },
+    },
+    {
+      title: (
+        <div style={{ fontSize: '12px', fontWeight: '500', color: '#64748B' }}>
+          <img src='/dots.svg' alt='icon'/>
+        </div>
+      ),
+      dataIndex: 'Icon',
+      key: 'Icon',
+      render: (_, record) => {
+        return (
+          <div
+            style={{ fontWeight: '600', fontSize: '12px', color: '#0f172a' }}
+          >
+            <img src="/dots.svg" alt="icon" />
           </div>
         );
       },
