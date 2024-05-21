@@ -67,7 +67,7 @@ const Dashboard = () => {
     const fetchAllOrders = async () => {
       try {
         const { data } = await axios.get(
-          `http://localhost:8000/api/orders?time=${filterSelected}`,
+          `https://dashboard-rest-api-1j07.onrender.com/api/orders?time=${filterSelected}`,
         );
         setOrders(data.data.orders);
       } catch (error) {

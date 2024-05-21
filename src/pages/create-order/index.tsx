@@ -39,7 +39,7 @@ const CreateOrder = () => {
       };
 
       const res = await axios.post(
-        'http://localhost:8000/api/orders',
+        'https://dashboard-rest-api-1j07.onrender.com/api/orders',
         {
           product_name: values.product_name,
           price: priceNumber,
