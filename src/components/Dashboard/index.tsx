@@ -7,8 +7,6 @@ import OrderTable from '../OrderTable';
 import axios from 'axios';
 import { NumericFormat } from 'react-number-format';
 
-import millify from 'millify';
-
 type Order = {
   order_number?: string;
   customer_name: string;
@@ -48,8 +46,6 @@ const countUniqueCustomers = (orders: any) => {
 
   return uniqueCustomers.size;
 };
-
-//filtered total customers
 
 const Dashboard = () => {
   const [orders, setOrders] = useState<Order[] | null>(null);
@@ -144,7 +140,6 @@ const Dashboard = () => {
         <div className={styles['dashboard__stats-section__stat']}>
           <p>Total Revenue</p>
           <div>
-            {' '}
             <NumericFormat
               value={totalRevenue}
               displayType="text"
@@ -152,8 +147,6 @@ const Dashboard = () => {
               thousandSeparator={true}
             />
           </div>
-
-          {/* ;<div>${totalRevenue}</div> */}
         </div>
 
         <Divider

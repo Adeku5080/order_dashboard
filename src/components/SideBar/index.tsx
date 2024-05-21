@@ -29,10 +29,6 @@ const SideBar = () => {
 
   return (
     <nav className={styles['side-bar']}>
-      {/* <div
-        className={styles['side-bar__section']}
-        style={{ overflowY: 'scroll' }}
-      ></div> */}
       <div className={styles['side-bar__section']}>
         <div className={styles['side-bar__section__company-profile']}>
           <img src="./ham.svg" alt="nav" />
@@ -41,7 +37,6 @@ const SideBar = () => {
               {' '}
               <img src="./logo.svg" alt="logo" />
             </Link>
-            {/* <img src="./logo.svg" alt="logo" /> */}
           </div>
         </div>
         <div className={styles['side-bar__section__divider']}></div>
@@ -51,7 +46,7 @@ const SideBar = () => {
               <span>
                 <img src="/overview.svg" alt="overview" />
               </span>
-              <Link to="" className={checkIfPathActive('/overview').class}>
+              <Link to="" className={styles['over-view']}>
                 {' '}
                 Overview
               </Link>

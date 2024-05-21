@@ -4,7 +4,8 @@ import styles from './index.module.scss';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
 
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const CreateOrder = () => {
   const navigate = useNavigate();
@@ -24,7 +25,7 @@ const CreateOrder = () => {
     const priceNumber = Number(priceWithoutComma);
 
     if (Number.isNaN(priceNumber)) {
-      toast('Put a valid price');
+      toast.error('Put a valid price');
       console.log('invalid number');
       return;
     } else {
@@ -157,6 +158,7 @@ const CreateOrder = () => {
               <div className={styles['signup-form-section__form__button']}>
                 <button type="submit">Submit</button>
               </div>
+              <ToastContainer />
             </Form>
           </div>
         </div>

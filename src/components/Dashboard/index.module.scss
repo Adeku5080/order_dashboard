@@ -22,11 +22,13 @@
     margin-bottom: 60px;
     align-items: center;
 
+    @media (max-width: 860px) {
+      flex-direction: column;
+    }
+
     &__stat {
       padding: 20px 24px 20px 24px;
       width: 335px;
-      // margin-top: 10px;
-      // margin-bottom: 10px;
 
       p {
         font-size: 14px;
@@ -52,10 +54,13 @@
     color: #f8fafc;
     gap: 20px;
 
+    @media (max-width: 860px) {
+      flex-direction: column;
+    }
+
     &__line {
       width: 662px;
       background: #ffffff;
-      // height: 364px;
       z-index: 10;
       border-radius: 12px;
     }
