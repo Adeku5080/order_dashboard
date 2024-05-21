@@ -2,7 +2,7 @@
 
 ## Installation
 
-Install dependcies 
+Install dependecies 
 
 ```
  npm install
@@ -12,7 +12,7 @@ Install dependcies
 start the project
 
 ```
- npm strt
+ npm start
 
 ```
 
