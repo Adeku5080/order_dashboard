@@ -9,6 +9,7 @@ import {
 } from 'chart.js';
 import PropTypes from 'prop-types';
 import millify from 'millify';
+import styles from './index.module.scss'
 
 Chartjs.register(LineElement, CategoryScale, LinearScale, PointElement);
 
