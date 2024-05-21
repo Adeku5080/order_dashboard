@@ -3,10 +3,18 @@
   height: 100%;
   background: #FFFFFF;
   position: relative;
+
+  @media(max-width :860px){
+  }
   
 
 
   &__container {
     width: calc(100% - 240px);
+
+     @media(max-width :860px){
+      margin: 0 auto;
+     width: 100%;
+  }
   }
 }
