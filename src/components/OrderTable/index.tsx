@@ -1,6 +1,6 @@
 import Table, { ColumnsType } from 'antd/es/table';
 import React, { useEffect, useState } from 'react';
-import styles from './index.module.scss'
+import styles from './index.module.scss';
 
 type OrderTableProps = {
   orders: any;
@@ -12,13 +12,10 @@ const formatDate = (dateString: string) => {
   return date.toLocaleDateString(); // Adjust options as needed
 };
 
-
-
 const OrderTable = ({ orders }: OrderTableProps) => {
   const [selectionType, setSelectionType] = useState<'checkbox' | 'radio'>(
     'checkbox',
   );
-
 
   interface OrderDataType {
     customer_name: string;
@@ -29,49 +26,98 @@ const OrderTable = ({ orders }: OrderTableProps) => {
   }
   const orderColumnData: ColumnsType<OrderDataType> = [
     {
-      title: 'Customer name',
+      title: (
+        <div style={{ fontSize: '12px', fontWeight: '500', color: '#64748B' }}>
+          Customer name
+        </div>
+      ),
       dataIndex: 'customer_name',
       key: 'customer_name',
       render: (_, record) => {
-        return <div>{record.customer_name}</div>;
-      },
-    },
-
-    {
-      title: 'Product name',
-      dataIndex: 'product_name',
-      key: 'product_name',
-      render: (_, record) => {
-        return <div>{record.product_name}</div>;
-      },
-    },
-
-    {
-      title: 'Category',
-      dataIndex: 'category',
-      key: 'category',
-      render: (_, record) => {
-        return <div>{record.product_category}</div>;
-      },
-    },
-
-    {
-      title: 'Date',
-      dataIndex: 'date',
-      key: 'date',
-      render: (_, record) => {
         return (
-          <div>{record.order_date ? formatDate(record.order_date) : '-'}</div>
+          <div
+            style={{ fontWeight: '600', fontSize: '12px', color: '#0f172a' }}
+          >
+            {record.customer_name}
+          </div>
         );
       },
     },
 
     {
-      title: 'Price',
+      title: (
+        <div style={{ fontSize: '12px', fontWeight: '500', color: '#64748B' }}>
+          Product name
+        </div>
+      ),
+      dataIndex: 'product_name',
+      key: 'product_name',
+      render: (_, record) => {
+        return (
+          <div
+            style={{ fontWeight: '600', fontSize: '12px', color: '#0f172a' }}
+          >
+            {record.product_name}
+          </div>
+        );
+      },
+    },
+
+    {
+      title: (
+        <div style={{ fontSize: '12px', fontWeight: '500', color: '#64748B' }}>
+          Category
+        </div>
+      ),
+      dataIndex: 'category',
+      key: 'category',
+      render: (_, record) => {
+        return (
+          <div
+            style={{ fontWeight: '600', fontSize: '12px', color: '#0f172a' }}
+          >
+            {record.product_category}
+          </div>
+        );
+      },
+    },
+
+    {
+      title: (
+        <div style={{ fontSize: '12px', fontWeight: '500', color: '#64748B' }}>
+          Date
+        </div>
+      ),
+      dataIndex: 'date',
+      key: 'date',
+      render: (_, record) => {
+        return (
+          <div
+            style={{ fontWeight: '600', fontSize: '12px', color: '#0f172a' }}
+          >
+            {' '}
+            {record.order_date ? formatDate(record.order_date) : '-'}
+          </div>
+        );
+      },
+    },
+
+    {
+      title: (
+        <div style={{ fontSize: '12px', fontWeight: '500', color: '#64748B'}}>
+          Price
+        </div>
+      ),
       dataIndex: 'price',
       key: 'price',
       render: (_, record) => {
-        return <div>{record.price}</div>;
+        return (
+          <div
+            style={{ fontWeight: '600', fontSize: '12px', color: '#0f172a' }}
+          >
+            {record.price}
+          </div>
+        );
       },
     },
   ];

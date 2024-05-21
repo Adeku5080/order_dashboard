@@ -123,7 +123,7 @@ const Dashboard = () => {
   return (
     <section className={styles.dashboard}>
       <div className={styles['dashboard__title-section']}>
-        <div>
+        <div  className={styles['dashboard__title-section__header']}>
           <h3>Welcome, Matthew</h3>
           <p>Monday, 05 August 2022</p>
         </div>
@@ -185,6 +185,7 @@ const Dashboard = () => {
         </div>
       </div>
       <div className={styles['dashboard__table-section']}>
+        <p>Orders</p>
         <OrderTable orders={orders} />
       </div>
     </section>
