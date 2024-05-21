@@ -36,26 +36,26 @@ const DoughnutChart = ({ scifi, drama, horror, docu, comedy, totalOrders }) => {
     ],
   };
 
-  const testOrder = '10';
-  
-  const innerLabel = {
-    id: 'innerLabel',
-    afterDatasetsDraw(chart) {
-      const {
-        ctx,
-        chartArea: { width, height },
-      } = chart;
-      console.log(totalOrders.toString(), 'orders in doughnut');
-      const text = testOrder;
+  console.log(totalOrders, 'before in doughnut');
 
-      ctx.save();
-      ctx.font = '32px sans-serif';
-      ctx.textAlign = 'center';
-      ctx.textBaseline = 'middle';
-      ctx.fillText(text, width / 2, height / 2);
-      ctx.restore();
-    },
-  };
+  // const innerLabel = {
+  //   id: 'innerLabel',
+  //   afterDatasetsDraw(chart) {
+  //     const {
+  //       ctx,
+  //       chartArea: { width, height },
+  //     } = chart;
+  //     console.log(totalOrders.toString(), 'orders in doughnut');
+  //     const text = totalOrders.toString();
+
+  //     ctx.save();
+  //     ctx.font = '32px sans-serif';
+  //     ctx.textAlign = 'center';
+  //     ctx.textBaseline = 'middle';
+  //     ctx.fillText(text, width / 2, height / 2);
+  //     ctx.restore();
+  //   },
+  // };
 
   const options = {
     plugins: {
@@ -63,7 +63,7 @@ const DoughnutChart = ({ scifi, drama, horror, docu, comedy, totalOrders }) => {
         display: true,
         position: 'right',
       },
-      innerLabel,
+      // innerLabel,
     },
   };
 
@@ -80,8 +80,18 @@ const DoughnutChart = ({ scifi, drama, horror, docu, comedy, totalOrders }) => {
       >
         Orders by Categories
       </h3>
-      <div style={{ width: '80%', height: '85%' }}>
-        <Doughnut data={data} options={options} plugins={[innerLabel]} />
+      <div style={{ width: '80%', height: '85%', position: 'relative' }}>
+        <div className={styles['centre_text']}>
+          Total
+        </div>
+        <div className={styles['centre_value']}>
+          {totalOrders}
+        </div>
+        <Doughnut
+          data={data}
+          options={options}
+          // plugins={[innerLabel]}
+        />
       </div>
     </>
   );
