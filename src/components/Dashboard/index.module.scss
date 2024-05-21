@@ -49,24 +49,24 @@
 
   &__charts-section {
     display: flex;
-    // justify-content: space-between;
+    justify-content: space-between;
     margin-bottom: 25px;
     color: #f8fafc;
-    gap: 55px;
+    // gap: 55px;
 
     @media (max-width: 860px) {
       flex-direction: column;
     }
 
     &__line {
-      width: 662px;
+      width: 60%;
       background: #ffffff;
       z-index: 10;
       border-radius: 12px;
     }
 
     &__doughnut {
-      width: 413px;
+      width: 30%;
       background: #ffffff;
       border-radius: 12px;
       padding: 30px;

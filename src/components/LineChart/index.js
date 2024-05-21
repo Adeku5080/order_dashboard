@@ -93,7 +93,7 @@ const LineChart = ({ orders }) => {
 
   return (
     <>
-      <h3 style={{ color: '#64748B', fontSize: '15px', lineHeight: '24px' }}>
+      <h3 style={{ color: '#64748B', fontSize: '15px', lineHeight: '24px', paddingLeft:'23px',paddingTop:'25px' }}>
         Revenue over time
       </h3>
       <div
