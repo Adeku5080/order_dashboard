@@ -5,6 +5,11 @@
   left: 124px;
   font-weight: 700;
   font-size: 18px;
+   @media(max-width :860px){
+     top: 125px;
+  left: 60px;
+  font-size: 16px;
+  }
 }
 
 .centre_text {
@@ -14,4 +19,8 @@
   font-weight: 400;
   color: #64748B;
   font-size: 12px;
+  @media(max-width :860px){
+     top: 110px;
+  left: 60px;
+  }
 }
